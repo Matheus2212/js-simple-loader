@@ -4,10 +4,13 @@ var Loader = {
         body: null,
         html: '<span><svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="15"></svg></span>',
         cssClass: 'loader',
-        open: function () {
+        check: function () {
                 if (this.body == null) {
                         this.body = document.getElementsByTagName('body')[0];
                 }
+        },
+        open: function () {
+                this.check();
                 if (!this.isOpen()) {
                         this.loader = document.createElement('div');
                         this.loader.setAttribute('id', 'loader');
@@ -21,18 +24,21 @@ var Loader = {
                 return this;
         },
         close: function () {
+                this.check();
                 if (this.isOpen()) {
                         this.body.classList.remove(this.cssClass);
                         setTimeout(function () {
                                 Loader.loader.remove();
-                        }, 300);
+                        }, 100);
                 }
                 return this;
         },
         isOpen: function () {
+                this.check();
                 return this.body.classList.contains(this.cssClass);
         },
         ifOpened: function (callback, close) {
+                this.check();
                 if (this.isOpen()) {
                         if (!!close)
                                 this.close();
@@ -43,6 +49,7 @@ var Loader = {
                 return this;
         },
         ifClosed: function (callback, open) {
+                this.check();
                 if (!this.isOpen()) {
                         if (!!open)
                                 this.open();
