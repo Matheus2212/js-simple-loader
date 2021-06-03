@@ -16,7 +16,7 @@ var Loader = {
                         this.loader.setAttribute('id', 'loader');
                         this.loader.classList.add('loader_website');
                         this.loader.innerHTML = this.html;
-                        this.body.append(this.loader);
+                        this.body.appendChild(this.loader);
                         setTimeout(function () {
                                 Loader.body.classList.add(Loader.cssClass);
                         }, 1);
