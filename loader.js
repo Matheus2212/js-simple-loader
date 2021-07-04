@@ -16,10 +16,8 @@ var Loader = {
                         this.loader.setAttribute('id', 'loader');
                         this.loader.classList.add('loader_website');
                         this.loader.innerHTML = this.html;
-                        this.body.appendChild(this.loader);
-                        setTimeout(function () {
-                                Loader.body.classList.add(Loader.cssClass);
-                        }, 1);
+                        this.body.append(this.loader);
+                        this.body.classList.add(this.cssClass);
                 }
                 return this;
         },
@@ -27,9 +25,7 @@ var Loader = {
                 this.check();
                 if (this.isOpen()) {
                         this.body.classList.remove(this.cssClass);
-                        setTimeout(function () {
-                                Loader.loader.remove();
-                        }, 100);
+                        this.loader.remove();
                 }
                 return this;
         },
