@@ -1,11 +1,21 @@
 # js-simple-loader
 
-Simple Loader using Vanilla JS
+Vanilla JS Simple Loader
 
 ## How to Use
 
-Import the files on your page, and use:
-Loader.open()
-Loader.close()
-Loader.ifClosed()
-Loader.ifOpened()
+Import the CSS and JS files on your webpage and use one of the codes bellow:
+
+```javascript
+Loader.open();
+
+Loader.close();
+
+Loader.ifClosed(function () {
+  //some callback here;
+}, "openLoader");
+
+Loader.ifOpened(function () {
+  //some callback here;
+}, "closeLoader");
+```
