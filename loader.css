@@ -61,7 +61,7 @@ body.loader .loader_website span {
 }
 .loader_website > span > svg {
   fill: transparent;
-  stroke: #563d7c;
+  stroke: #1a73e8;
   stroke-width: 5;
   animation: loader_dash 2s ease infinite, loader_rotate 2s linear infinite;
 }
