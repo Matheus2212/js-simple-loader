@@ -71,20 +71,19 @@ body.loader .loader_website span {
 }
 
 .loader_website>span.ios {
-  background: transparent;
   height: 48px;
   width: 48px;
   animation: none;
 
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  -ms-box-shadow: none;
-  box-shadow: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .loader_website span.ios>svg {
-  fill: #FFFFFF;
+  fill: #1a73e8;
   stroke-width: 0;
   animation: none;
   height: 100%;
@@ -168,11 +167,11 @@ body.loader .loader_website span {
 
 @keyframes loader_pulse {
   50% {
-    fill: #FFFFFF;
+    fill: #1a73e8;
   }
 
   to {
-    fill: rgba(255, 255, 255, .4);
+    fill: rgba(26, 115, 232, .4);
   }
 }
 
