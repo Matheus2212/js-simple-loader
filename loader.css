@@ -1,4 +1,4 @@
-/*loader_website*/
+/*loader*/
 .loader_website {
   position: fixed;
   top: 0;
@@ -21,6 +21,7 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .loader_website * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -28,10 +29,12 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 body.loader .loader_website span {
   top: 18%;
 }
-.loader_website > span {
+
+.loader_website>span {
   display: block;
   width: 48px;
   height: 48px;
@@ -59,32 +62,119 @@ body.loader .loader_website span {
   -ms-box-shadow: #000 0px 5px 10px -5px;
   box-shadow: #000 0px 5px 10px -5px;
 }
-.loader_website > span > svg {
+
+.loader_website>span>svg {
   fill: transparent;
   stroke: #1a73e8;
   stroke-width: 5;
   animation: loader_dash 2s ease infinite, loader_rotate 2s linear infinite;
 }
+
+.loader_website>span.ios {
+  background: transparent;
+  height: 48px;
+  width: 48px;
+  animation: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+
+.loader_website span.ios>svg {
+  fill: #FFFFFF;
+  stroke-width: 0;
+  animation: none;
+  height: 100%;
+  width: 100%;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(1) {
+  animation: loader_pulse 1s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(2) {
+  animation: loader_pulse 1s -.083s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(3) {
+  animation: loader_pulse 1s -.166s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(4) {
+  animation: loader_pulse 1s -.249s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(5) {
+  animation: loader_pulse 1s -.332s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(6) {
+  animation: loader_pulse 1s -.415s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(7) {
+  animation: loader_pulse 1s -.498s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(8) {
+  animation: loader_pulse 1s -.581s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(9) {
+  animation: loader_pulse 1s -.664s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(10) {
+  animation: loader_pulse 1s -.747s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(11) {
+  animation: loader_pulse 1s -.83s infinite linear;
+}
+
+.loader_website>span.ios>svg path:nth-of-type(12) {
+  animation: loader_pulse 1s -.913s infinite linear;
+}
+
 @keyframes loader_dash {
   0% {
     stroke-dasharray: 1, 95;
     stroke-dashoffset: 0;
   }
+
   50% {
     stroke-dasharray: 85, 95;
     stroke-dashoffset: -25;
   }
+
   100% {
     stroke-dasharray: 85, 95;
     stroke-dashoffset: -93;
   }
 }
+
 @keyframes loader_rotate {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
-/*loader_website*/
+
+@keyframes loader_pulse {
+  50% {
+    fill: #FFFFFF;
+  }
+
+  to {
+    fill: rgba(255, 255, 255, .4);
+  }
+}
+
+
+/*loader*/
